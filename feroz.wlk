@@ -1,5 +1,4 @@
 import caperucita.*
-import chanchitos.*
 
 object feroz {
   var pesoLobo = 10

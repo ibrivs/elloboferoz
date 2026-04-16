@@ -18,4 +18,7 @@ object abuelita{
 
 object cazador {
   method peso() = 70
+  method cortarPanzaLobo() {
+    feroz.crisisDeLobo()
+  }
 }
