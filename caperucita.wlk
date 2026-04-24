@@ -3,6 +3,7 @@ import feroz.*
 
 object caperucita {
     const peso = 60
+    method miCanasta() = canasta
     method peso() = peso + canasta.peso()
 }
 object canasta {
