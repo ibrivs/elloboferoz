@@ -16,7 +16,17 @@ object feroz {
   method comer(unaComida) {
     self.aumentarPeso(unaComida.peso() * 0.1)
   }
-  method correr(){
+  method correr(unLugar){
     self.disminuirPeso(1)
   }
+}
+object bosque {}
+object casaAbuela {}
+
+object historia(){
+  method contarHisoria(){
+    feroz.correr(bosque)
+    feroz.correr(casaAbuela)
+    feroz.comer(abuelita)
+    caperucita.miCanasta().perderManzana(1)
 }
