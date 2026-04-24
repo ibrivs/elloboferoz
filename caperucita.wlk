@@ -2,16 +2,21 @@
 import feroz.*
 
 object caperucita {
-    method peso() = 60 + canasta.peso()
+    const peso = 60
+    method peso() = peso + canasta.peso()
 }
 object canasta {
     var cantManzanas = 6
+    method peso(){
+        manzana.peso() * cantManzanas
+    }
     method caenManzanas(cantidad) {
       cantManzanas -= cantidad 
     }
-    method peso() = cantManzanas * 0.2
 }
-
+object manzana(){
+    method peso() = 0.2
+}
 object abuelita{
     method peso() = 50
 }
