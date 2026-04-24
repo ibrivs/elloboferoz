@@ -1,22 +1,22 @@
 import caperucita.*
 
 object feroz {
-  var pesoLobo = 10
+  var pesoLobo = pesoInicial
+  cons pesoInicial = 10
+  method aumentarPeso(unidades){
+    pesoLobo += unidades
+  }
+  method disminuirPeso(unidades){
+    pesoLobo -= unidades
+  }
 
-  method crisisDeLobo() = pesoLobo == 10
+  method crisisDeLobo() = pesoInicial
 
-  method estaSaludable() = pesoLobo > 19 or pesoLobo < 151
+  method estaSaludable() = pesoLobo.between(20, 150)
   method comer(unaComida) {
-    pesoLobo += unaComida.peso() * 0.1
+    self.aumentarPeso(unaComida.peso() * 0.1)
   }
-  method correr(unLugar){
-    pesoLobo -= 1
+  method correr(){
+    self.disminuirPeso(1)
   }
-}
-
-object bosque {
-  
-}
-object casaAbuela {
-  
 }
